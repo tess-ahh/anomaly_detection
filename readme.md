@@ -4,6 +4,18 @@
 
 ---
 
+# 🌐 Live Web Application
+
+## 🔗 Public Deployment
+
+🚀 **Try the Live Fraud Detection App Here:**
+
+[Credit Card Fraud Detection Web App](https://anomalydetection-qxwfshrb2rrqsygnv84njz.streamlit.app/)
+
+The application is publicly deployed using Streamlit Community Cloud and supports real-time fraud prediction.
+
+---
+
 # 📌 Project Overview
 
 This project presents a complete **Credit Card Fraud Detection System** designed to identify fraudulent transactions using:
@@ -16,7 +28,7 @@ This project presents a complete **Credit Card Fraud Detection System** designed
 
 The system compares multiple machine learning and anomaly detection algorithms to identify the most effective approach for fraud detection.
 
-The final model is integrated into an interactive web application that allows users to perform real-time fraud prediction.
+The final trained model is integrated into an interactive web application that enables users to perform real-time fraud prediction.
 
 ---
 
@@ -28,7 +40,7 @@ The final model is integrated into an interactive web application that allows us
 ✔ Evaluate model performance using multiple metrics
 ✔ Track experiments using MLflow
 ✔ Select the best-performing model
-✔ Build an interactive fraud prediction web application
+✔ Build and deploy an interactive fraud prediction web application
 
 ---
 
@@ -49,7 +61,7 @@ The final model is integrated into an interactive web application that allows us
 
 # 📚 Libraries Used
 
-```python id="6tq4ys"
+```python
 pandas
 numpy
 matplotlib
@@ -70,8 +82,10 @@ joblib
 **Credit Card Fraud Detection Dataset**
 
 The dataset contains anonymized credit card transaction records collected from European cardholders.
+dataset is from kaggle. You can download it from here:"https://www.kaggle.com/code/annastasy/anomaly-detection-credit-card-fraud/input"
 
 ---
+
 
 ## 📊 Dataset Statistics
 
@@ -83,6 +97,7 @@ The dataset contains anonymized credit card transaction records collected from E
 | Target Column           | `Class`           |
 
 ---
+more dataset information in Dataset_Document.pdf
 
 ## 🎯 Target Labels
 
@@ -115,6 +130,9 @@ To strengthen anomaly detection capability, statistical outlier detection method
 
 Used to detect extreme deviations from the mean.
 
+Formula:
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"z = \frac{x - \mu}{\sigma}"}}
 
 ### Purpose
 
@@ -153,10 +171,9 @@ Multiple algorithms were trained and compared to identify the best-performing fr
 
 ---
 
-# 🧠 Model Training Pipeline
+# 🧠 Machine Learning Workflow
 
-The system follows a complete machine learning workflow:
-
+```text
 Dataset
    ↓
 Data Cleaning
@@ -181,6 +198,7 @@ Save Trained Model
 Streamlit Web Application
    ↓
 Real-Time Fraud Prediction
+```
 
 ---
 
@@ -233,44 +251,37 @@ Each algorithm was logged as a separate experiment run for efficient comparison 
 
 The project includes an interactive web application built using Streamlit.
 
-The web application allows users to:
-
-* enter transaction details
-* perform fraud prediction
-* classify transactions as normal or fraudulent
-* interact with the trained machine learning model in real time
-
 ---
 
 ## 🚀 Web App Features
 
+✔ Real-Time Fraud Prediction
 ✔ User-Friendly Interface
-✔ Real-Time Prediction
-✔ Fraud Detection Alerts
 ✔ Interactive Input System
-✔ ML Model Integration
+✔ Fraud Detection Alerts
+✔ Trained ML Model Integration
+✔ Public Cloud Deployment
 
 ---
 
-# 💾 Model Saving & Deployment Preparation
+# 💾 Model Saving & Deployment
 
 The final trained model and scaler were saved using `joblib`.
 
 ### Saved Files
 
+```text
 best_model.pkl
 scaler.pkl
+```
 
-These files enable:
-
-* future predictions
-* web app integration
-* real-time fraud detection systems
+The application was deployed publicly using Streamlit Community Cloud.
 
 ---
 
 # 📁 Project Structure
 
+```text
 anomaly_detection/
 │
 ├── app.py
@@ -282,27 +293,35 @@ anomaly_detection/
 ├── notebooks/
 ├── mlruns/
 └── results/
+```
 
 ---
 
-# ▶️ Running the Streamlit Application
+# ▶️ Running the Project Locally
 
 ## Step 1: Install Dependencies
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-## Step 2: Run the Application
-streamlit run app.py
+## Step 2: Run the Streamlit Application
 
+```bash
+streamlit run app.py
+```
+
+---
 
 ## Step 3: Open in Browser
 
-
+```text
 http://localhost:8501
+```
+
+---
 
 # 🏆 Best Model Selection
 
@@ -327,7 +346,6 @@ Potential future improvements include:
 * 🔌 API Integration
 * 📱 Mobile Application Support
 * ⚡ Advanced Hyperparameter Optimization
-* 🌍 Public Web Deployment
 
 ---
 
@@ -338,5 +356,7 @@ This project successfully developed a comprehensive anomaly detection framework 
 The integration of MLflow enhanced experiment tracking, model comparison, and reproducibility, while Streamlit transformed the machine learning pipeline into an interactive real-time web application.
 
 The final system demonstrates how machine learning can be effectively used to improve fraud detection accuracy and support intelligent financial security systems.
+
+---
 
 
