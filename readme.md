@@ -147,7 +147,7 @@ Used for identifying outliers using quartile boundaries.
 
 Formula:
 
-$$ IQR = Q_3 - Q_1
+$$ IQR = Q_3 - Q_1 $$
 
 ### Purpose
 
@@ -289,10 +289,12 @@ anomaly_detection/
 ├── scaler.pkl
 ├── creditcard.csv
 ├── requirements.txt
-├── README.md
-├── notebooks/
-├── mlruns/
-└── results/
+├── readme.md
+├── mlflow.db
+├──advanced_anomaly_detection_mlflow.ipynb
+├──anomaly_detection.ipynb
+├──dataset_Document.pdf
+└── anomaly_results.csv
 ```
 
 ---
