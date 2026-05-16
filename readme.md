@@ -132,7 +132,7 @@ Used to detect extreme deviations from the mean.
 
 Formula:
 
-genui{"math_block_widget_always_prefetch_v2":{"content":"z = \frac{x - \mu}{\sigma}"}}
+$$ z = \frac{x - \mu}{\sigma} $$
 
 ### Purpose
 
