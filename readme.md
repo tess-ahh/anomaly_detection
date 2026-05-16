@@ -147,7 +147,7 @@ Used for identifying outliers using quartile boundaries.
 
 Formula:
 
-IQR = Q_3 - Q_1
+$$ IQR = Q_3 - Q_1
 
 ### Purpose
 
