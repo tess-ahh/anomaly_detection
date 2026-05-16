@@ -1,31 +1,34 @@
 # 🚨 Credit Card Fraud Detection System
 
-### *Advanced Anomaly Detection Using Machine Learning, Statistical Analysis, and MLflow*
+### *Advanced Anomaly Detection Using Machine Learning, Statistical Analysis, MLflow, and Streamlit*
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-Financial fraud detection is one of the most critical applications of Machine Learning in the banking and cybersecurity industries.
-This project presents a complete **Credit Card Fraud Detection System** designed to identify fraudulent transactions using a combination of:
+This project presents a complete **Credit Card Fraud Detection System** designed to identify fraudulent transactions using:
 
-* 📊 Statistical Outlier Detection
+* 📊 Statistical Analysis Techniques
 * 🤖 Machine Learning Algorithms
-* 🧪 Experiment Tracking with MLflow
+* 🧪 MLflow Experiment Tracking
+* 🌐 Streamlit Web Application
 * 📈 Performance Evaluation & Visualization
 
-The system compares multiple supervised and unsupervised learning algorithms to determine the most effective approach for anomaly detection.
+The system compares multiple machine learning and anomaly detection algorithms to identify the most effective approach for fraud detection.
+
+The final model is integrated into an interactive web application that allows users to perform real-time fraud prediction.
 
 ---
 
 # 🎯 Project Objectives
 
 ✔ Detect fraudulent credit card transactions
-✔ Compare multiple anomaly detection algorithms
-✔ Apply statistical analysis techniques for outlier detection
-✔ Evaluate model performance using industry-standard metrics
-✔ Track experiments and results using MLflow
-✔ Select and deploy the best-performing model for prediction
+✔ Compare multiple machine learning algorithms
+✔ Apply statistical outlier detection techniques
+✔ Evaluate model performance using multiple metrics
+✔ Track experiments using MLflow
+✔ Select the best-performing model
+✔ Build an interactive fraud prediction web application
 
 ---
 
@@ -38,6 +41,7 @@ The system compares multiple supervised and unsupervised learning algorithms to 
 | VS Code              | Development Environment   |
 | Anaconda             | Environment Management    |
 | MLflow               | Experiment Tracking       |
+| Streamlit            | Web Application Framework |
 | Scikit-learn         | Machine Learning          |
 | Matplotlib & Seaborn | Data Visualization        |
 
@@ -45,7 +49,7 @@ The system compares multiple supervised and unsupervised learning algorithms to 
 
 # 📚 Libraries Used
 
-```python
+```python id="6tq4ys"
 pandas
 numpy
 matplotlib
@@ -53,6 +57,7 @@ seaborn
 scikit-learn
 scipy
 mlflow
+streamlit
 joblib
 ```
 
@@ -109,10 +114,6 @@ To strengthen anomaly detection capability, statistical outlier detection method
 ## 🔹 Z-Score Analysis
 
 Used to detect extreme deviations from the mean.
-
-Formula:
-$z = \frac{x - \mu}{\sigma}$ 
-
 
 
 ### Purpose
@@ -177,8 +178,11 @@ Best Model Selection
    ↓
 Save Trained Model
    ↓
-Predict New Transactions
+Streamlit Web Application
+   ↓
+Real-Time Fraud Prediction
 
+---
 
 # 📊 Model Evaluation Metrics
 
@@ -197,7 +201,7 @@ The algorithms were evaluated using multiple performance metrics:
 
 # 📉 Data Visualization
 
-The project includes several visualizations for better analytical understanding:
+The project includes several visualizations for analytical understanding:
 
 * 📌 Scatter Plot Visualization
 * 📌 Algorithm Comparison Graphs
@@ -225,6 +229,81 @@ Each algorithm was logged as a separate experiment run for efficient comparison 
 
 ---
 
+# 🌐 Streamlit Web Application
+
+The project includes an interactive web application built using Streamlit.
+
+The web application allows users to:
+
+* enter transaction details
+* perform fraud prediction
+* classify transactions as normal or fraudulent
+* interact with the trained machine learning model in real time
+
+---
+
+## 🚀 Web App Features
+
+✔ User-Friendly Interface
+✔ Real-Time Prediction
+✔ Fraud Detection Alerts
+✔ Interactive Input System
+✔ ML Model Integration
+
+---
+
+# 💾 Model Saving & Deployment Preparation
+
+The final trained model and scaler were saved using `joblib`.
+
+### Saved Files
+
+best_model.pkl
+scaler.pkl
+
+These files enable:
+
+* future predictions
+* web app integration
+* real-time fraud detection systems
+
+---
+
+# 📁 Project Structure
+
+anomaly_detection/
+│
+├── app.py
+├── best_model.pkl
+├── scaler.pkl
+├── creditcard.csv
+├── requirements.txt
+├── README.md
+├── notebooks/
+├── mlruns/
+└── results/
+
+---
+
+# ▶️ Running the Streamlit Application
+
+## Step 1: Install Dependencies
+
+
+pip install -r requirements.txt
+
+
+---
+
+## Step 2: Run the Application
+streamlit run app.py
+
+
+## Step 3: Open in Browser
+
+
+http://localhost:8501
+
 # 🏆 Best Model Selection
 
 After evaluating all models, the best-performing algorithm was selected based on:
@@ -238,36 +317,17 @@ The selected model was then used for final fraud prediction.
 
 ---
 
-# 💾 Model Saving & Deployment Preparation
-
-The final trained model and scaler were saved using `joblib`.
-
-### Saved Files
-
-
-best_model.pkl
-scaler.pkl
-
-
-These files enable:
-
-* future predictions
-* deployment in web applications
-* real-time fraud detection systems
-
----
-
 # 🔮 Future Enhancements
 
 Potential future improvements include:
 
-* 🌐 Streamlit/Flask Web Application
-* ⚡ Real-Time Fraud Detection
-* 🧠 Deep Learning Models
 * ☁ Cloud Deployment
+* 📡 Real-Time Transaction Monitoring
+* 🧠 Deep Learning Models
 * 🔌 API Integration
-* 📡 Live Transaction Monitoring
-* 🎯 Hyperparameter Optimization
+* 📱 Mobile Application Support
+* ⚡ Advanced Hyperparameter Optimization
+* 🌍 Public Web Deployment
 
 ---
 
@@ -275,7 +335,8 @@ Potential future improvements include:
 
 This project successfully developed a comprehensive anomaly detection framework for credit card fraud detection using statistical methods and multiple machine learning algorithms.
 
-The integration of MLflow enhanced experiment tracking, model comparison, and reproducibility, making the system scalable, professional, and aligned with real-world machine learning workflows.
+The integration of MLflow enhanced experiment tracking, model comparison, and reproducibility, while Streamlit transformed the machine learning pipeline into an interactive real-time web application.
 
-The final system demonstrates how data science and machine learning can be effectively used to improve fraud detection accuracy and support intelligent financial security systems.
+The final system demonstrates how machine learning can be effectively used to improve fraud detection accuracy and support intelligent financial security systems.
+
 
